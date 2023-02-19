@@ -1,0 +1,39 @@
+.main-app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    header {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #4CAF50;
+        color: whitesmoke;
+        margin-bottom: 30px;
+        font-size: 1.2em;
+
+    }
+
+    .nav-link {
+        margin-inline: 5px;
+        cursor: pointer;
+
+        &:hover {
+            color: #2c5e2e;
+        }
+    }
+
+    main {
+        flex-grow: 1;
+    }
+
+    footer {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        color: whitesmoke;
+        background-color: #151515;
+        font-size: 1.2em;
+    }
+}

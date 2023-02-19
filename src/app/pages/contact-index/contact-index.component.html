@@ -1,0 +1,9 @@
+<section class="main-app">
+    <!-- <p>{{prm|async}}</p> -->
+    <!-- <pet-details *ngIf="selectedPetId; else petList" [petId]="selectedPetId"></pet-details> -->
+
+    <!-- <ng-template #petList> -->
+    <contact-filter></contact-filter>
+    <contact-list [contacts]="contacts$|async"></contact-list>
+    <!-- </ng-template> -->
+</section>

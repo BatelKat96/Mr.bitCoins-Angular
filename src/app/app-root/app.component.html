@@ -1,0 +1,21 @@
+<section class="main-app">
+    <header class="container">
+        <h1>Mister-BITCoin</h1>
+        <nav>
+            <span class="nav-link" (click)="selectCmp('home-page')">Home</span>
+            <span class="nav-link" (click)="selectCmp('contact-index')">Contacts</span>
+        </nav>
+    </header>
+
+
+    <main [ngSwitch]="selectedCmp" class="container">
+
+        <home-page *ngSwitchCase="'home-page'"></home-page>
+        <contact-index *ngSwitchCase="'contact-index'"></contact-index>
+        <p *ngSwitchDefault="">Nothing found</p>
+    </main>
+
+    <footer class="container">
+        <p>BatelKatiei-Rights &copy;</p>
+    </footer>
+</section>
