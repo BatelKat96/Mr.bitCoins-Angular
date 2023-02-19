@@ -162,7 +162,7 @@ export class ContactService {
         this.query()
     }
 
-    public getContactById(id: string): Observable<Contact> {
+    public getById(id: string): Observable<Contact> {
         //mock the server work
         const contact = this._contactsDb.find(contact => contact._id === id)
 

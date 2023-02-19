@@ -15,14 +15,20 @@ export class ContactIndexComponent implements OnInit, OnDestroy {
     contacts!: Contact[]
     contacts$!: Observable<Contact[]>
     subscription!: Subscription
-
+    selectedContactId: string = ''
 
     ngOnInit(): void {
         this.contactService.query()
         this.contacts$ = this.contactService.contacts$
-        // console.log('this.contacts$:', this.contacts$.source._value)
 
     }
+
+
+    onSelectContactId(contactId: string) {
+        console.log('contactId:', contactId)
+        this.selectedContactId = contactId
+    }
+
 
     ngOnDestroy(): void {
     }

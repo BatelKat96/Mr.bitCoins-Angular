@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { User } from 'src/app/models/user.model';
+import { BitCoinService } from 'src/app/services/bitcoin.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -10,15 +11,14 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HomePageComponent {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private bitcoinService: BitCoinService) { }
 
   user!: User
 
+  rate$!: Observable<Object> | Promise<number>
 
   ngOnInit(): void {
-
     this.user = this.userService.getUser()
-    // console.log('this.contacts$:', this.contacts$.source._value)
-
+    this.rate$ = this.bitcoinService.getRate()
   }
 }

@@ -1,4 +1,4 @@
-<section class="pet-list">
-    <contact-preview *ngFor="let contact of contacts" [contact]="contact"></contact-preview>
-    <!-- <pet-preview (selectPet)="selectPet.emit($event)" *ngFor="let pet of pets" [pet]="pet" ></pet-preview> -->
+<section class="contact-list">
+    <contact-preview (selectContact)="selectContact.emit($event)" *ngFor="let contact of contacts"
+        [contact]="contact"></contact-preview>
 </section>

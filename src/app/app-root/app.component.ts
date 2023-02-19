@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+    title = 'mister-bitCoin'
     selectedCmp = 'home-page';
     selectCmp(cmpName: string) {
         this.selectedCmp = cmpName;

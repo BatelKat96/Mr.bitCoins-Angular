@@ -9,9 +9,9 @@ import { Contact } from 'src/app/models/contact.model';
 export class ContactPreviewComponent {
 
     @Input() contact!: Contact
-    // @Output() selectPet = new EventEmitter<string>()
+    @Output() selectContact = new EventEmitter<string>()
 
-    // onSelectPetId() {
-    //     this.selectPet.emit(this.pet._id)
-    // }
+    onSelectContactId() {
+        this.selectContact.emit(this.contact._id)
+    }
 }

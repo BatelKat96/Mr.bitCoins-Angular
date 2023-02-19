@@ -10,6 +10,7 @@ import { ContactPreviewComponent } from './cmps/contact-preview/contact-preview.
 import { FormsModule } from '@angular/forms';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.component';
+import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.com
     ContactListComponent,
     ContactPreviewComponent,
     ContactFilterComponent,
+    ContactDetailsComponent,
     HomePageComponent,
   ],
   imports: [

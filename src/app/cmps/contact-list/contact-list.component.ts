@@ -9,6 +9,6 @@ import { Contact } from 'src/app/models/contact.model';
 export class ContactListComponent {
 
     @Input() contacts!: Contact[] | null
-    // @Output() selectPet = new EventEmitter<string>()
+    @Output() selectContact = new EventEmitter<string>()
 
 }
