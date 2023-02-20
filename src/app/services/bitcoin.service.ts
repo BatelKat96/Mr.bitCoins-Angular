@@ -1,39 +1,46 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { map, Observable, tap } from "rxjs";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { map, tap } from 'rxjs/operators'
+import { lastValueFrom } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class BitCoinService {
-    constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-    private _RATE = 'rates'
+  public getRate() {
+    const url = 'https://blockchain.info/tobtc?currency=USD&value=1'
+    return this.getResult('RATE', url)
+  }
 
-    public getRate() {
-        console.log('get rate');
-        let rate = this._loadFromStorage(this._RATE)
-        console.log(' up rate:', rate)
-        if (rate) return rate
-        console.log('hi', rate);
-        rate = this.http.get('https://blockchain.info/tobtc?currency=USD&value=1')
-            .pipe(
-                // tap(res => console.log('res', res)),
-                map(res => res)
-            )
-        console.log('end rate:', rate)
-        this._saveToStorage(this._RATE, rate)
+  public getMarketPrice() {
+    const url = 'https://api.blockchain.info/charts/market-price?timespan=5months&format=json&cors=true'
+    return this.getResult('MARKET_PRICE', url)
+  }
 
-        return rate
-    }
+  public getConfirmedTransactions() {
+
+  }
+
+  private getResult(type: string, url: string) {
+    const result = loadFromStorage(type)
+    if (result) return Promise.resolve(result)
+    return lastValueFrom(this.http.get<{ answer: string }>(url)
+      .pipe(
+        tap(res => saveToStorage(type, res)),
+      ))
+  }
 
 
-    private _saveToStorage(key: string, val: Observable<any[]>) {
-        localStorage.setItem(key, JSON.stringify(val))
-    }
+}
 
-    private _loadFromStorage(key: string) {
-        let data = localStorage.getItem(key)
-        return data ? JSON.parse(data) : undefined
-    }
+function saveToStorage(key: string, value: any) {
+  const data: any = JSON.stringify(value) || null
+  localStorage.setItem(key, data)
+}
+
+function loadFromStorage(key: string) {
+  let data = localStorage.getItem(key)
+  return data ? JSON.parse(data) : undefined
 }

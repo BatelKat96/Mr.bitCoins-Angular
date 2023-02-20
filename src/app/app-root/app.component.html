@@ -4,14 +4,15 @@
         <nav>
             <span class="nav-link" (click)="selectCmp('home-page')">Home</span>
             <span class="nav-link" (click)="selectCmp('contact-index')">Contacts</span>
+            <span class="nav-link" (click)="selectCmp('charts')">Statistics</span>
         </nav>
     </header>
 
 
     <main [ngSwitch]="selectedCmp" class="container">
-
         <home-page *ngSwitchCase="'home-page'"></home-page>
         <contact-index *ngSwitchCase="'contact-index'"></contact-index>
+        <charts *ngSwitchCase="'charts'"></charts>
         <p *ngSwitchDefault="">Nothing found</p>
     </main>
 

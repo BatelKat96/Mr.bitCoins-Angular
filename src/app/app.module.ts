@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
+import { ChartsComponent } from './cmps/charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ContactDetailsComponent } from './pages/contact-details/contact-details
     ContactFilterComponent,
     ContactDetailsComponent,
     HomePageComponent,
+    ChartsComponent,
   ],
   imports: [
     BrowserModule,

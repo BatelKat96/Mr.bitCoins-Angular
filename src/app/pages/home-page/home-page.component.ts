@@ -14,11 +14,10 @@ export class HomePageComponent {
   constructor(private userService: UserService, private bitcoinService: BitCoinService) { }
 
   user!: User
+  rate!: number;
 
-  rate$!: Observable<Object> | Promise<number>
-
-  ngOnInit(): void {
+  async ngOnInit() {
     this.user = this.userService.getUser()
-    this.rate$ = this.bitcoinService.getRate()
+    this.rate = await this.bitcoinService.getRate()
   }
 }
