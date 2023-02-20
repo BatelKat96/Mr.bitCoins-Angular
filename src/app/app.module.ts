@@ -12,6 +12,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { ChartsComponent } from './cmps/charts/charts.component';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { MarketPriceComponent } from './cmps/market-price/market-price.component';
+import { AppHeaderComponent } from './cmps/app-header/app-header.component';
+
 
 @NgModule({
   declarations: [
@@ -23,12 +27,15 @@ import { ChartsComponent } from './cmps/charts/charts.component';
     ContactDetailsComponent,
     HomePageComponent,
     ChartsComponent,
+    MarketPriceComponent,
+    AppHeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

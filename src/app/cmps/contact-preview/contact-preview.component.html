@@ -1,4 +1,4 @@
-<section (click)="onSelectContactId()" class="contact-preview">
+<section [routerLink]="['/contacts', contact._id]" class="contact-preview">
     <section class="info">
         <section class="data">
             <h3>{{contact.name}}</h3>

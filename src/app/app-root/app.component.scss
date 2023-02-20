@@ -3,27 +3,6 @@
     display: flex;
     flex-direction: column;
 
-    header {
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #f5b055;
-        color: whitesmoke;
-        margin-bottom: 30px;
-        font-size: 1.2em;
-
-    }
-
-    .nav-link {
-        margin-inline: 5px;
-        cursor: pointer;
-
-        &:hover {
-            color: #d57900;
-        }
-    }
-
     main {
         flex-grow: 1;
     }

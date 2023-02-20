@@ -142,10 +142,8 @@ export class ContactService {
 
     public query(): void {
         const filterBy = this._contactFilter$.value
-
         let contacts = this._contactsDb;
-        console.log('contacts:', contacts)
-
+        // console.log('contacts:', contacts)
         if (filterBy && filterBy.term) {
             console.log('filterBy.term:', filterBy.term)
             contacts = this._contactsDb.filter(({ name }) => {

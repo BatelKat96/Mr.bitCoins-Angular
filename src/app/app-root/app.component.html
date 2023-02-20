@@ -1,20 +1,10 @@
 <section class="main-app">
-    <header class="container">
-        <h1>Mister-BITCoin</h1>
-        <nav>
-            <span class="nav-link" (click)="selectCmp('home-page')">Home</span>
-            <span class="nav-link" (click)="selectCmp('contact-index')">Contacts</span>
-            <span class="nav-link" (click)="selectCmp('charts')">Statistics</span>
-        </nav>
-    </header>
 
-
-    <main [ngSwitch]="selectedCmp" class="container">
-        <home-page *ngSwitchCase="'home-page'"></home-page>
-        <contact-index *ngSwitchCase="'contact-index'"></contact-index>
-        <charts *ngSwitchCase="'charts'"></charts>
-        <p *ngSwitchDefault="">Nothing found</p>
+    <app-header></app-header>
+    <main class="container">
+        <router-outlet></router-outlet>
     </main>
+
 
     <footer class="container">
         <p>BatelKatiei-Rights &copy;</p>
