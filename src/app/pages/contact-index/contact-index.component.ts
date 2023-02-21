@@ -22,6 +22,10 @@ export class ContactIndexComponent implements OnInit, OnDestroy {
 
     }
 
+
+    onRemoveContact(contactId: string) {
+        this.contactService.remove(contactId)
+    }
     ngOnDestroy(): void {
     }
 

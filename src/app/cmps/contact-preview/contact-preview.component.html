@@ -6,8 +6,10 @@
             <p>Phone: {{contact.phone}}</p> -->
         </section>
         <section class="actions">
-            <button class="remove-btn">X</button>
+            <button (click)="onRemoveContact($event)" class="remove-btn">X</button>
+            <button (click)="onEditContact($event)" class="edit-btn">Edit</button>
+
         </section>
     </section>
-    <img src="https://robohash.org/{{contact._id}}?set=set4" alt="">
+    <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
 </section>

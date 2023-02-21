@@ -9,5 +9,5 @@ import { Contact } from 'src/app/models/contact.model';
 export class ContactListComponent {
 
     @Input() contacts!: Contact[] | null
-
+    @Output() remove = new EventEmitter()
 }

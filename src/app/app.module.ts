@@ -15,6 +15,7 @@ import { ChartsComponent } from './cmps/charts/charts.component';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { MarketPriceComponent } from './cmps/market-price/market-price.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
+import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { AppHeaderComponent } from './cmps/app-header/app-header.component';
     ChartsComponent,
     MarketPriceComponent,
     AppHeaderComponent,
+    ContactEditComponent,
   ],
   imports: [
     BrowserModule,

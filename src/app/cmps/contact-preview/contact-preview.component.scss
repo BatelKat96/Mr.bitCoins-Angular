@@ -1,9 +1,10 @@
 .contact-preview {
-    height: 150px;
-    width: 400px;
+    // height: 150px;
+    width: 200px;
     box-shadow: -1px 1px 8px #00000045;
     border-radius: 3px;
     display: flex;
+    flex-direction: column;
     cursor: pointer;
 
     .info {
@@ -30,6 +31,7 @@
             transform: translateX(-10%);
             transition-duration: 0.3s;
             transition-property: transform, opacity;
+            margin-top: 5px;
 
             .remove-btn {
                 width: 2em;
