@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { lastValueFrom } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { lastValueFrom, Subscription } from 'rxjs';
 import { Contact } from 'src/app/models/contact.model';
 import { ContactService } from 'src/app/services/contact.service';
 
@@ -10,19 +11,30 @@ import { ContactService } from 'src/app/services/contact.service';
 })
 export class ContactDetailsComponent implements OnInit {
 
-    constructor(private contactService: ContactService) { }
-    @Output() selectContact = new EventEmitter<string>()
+    constructor(
+        private contactService: ContactService,
+        private route: ActivatedRoute,
+        private router: Router) { }
 
-    @Input() contactId!: string
+
     contact!: Contact | undefined
+    subscription!: Subscription
 
     async ngOnInit() {
-        const contact = await lastValueFrom(this.contactService.getById(this.contactId))
-        this.contact = contact
+        // this.subscription = this.route.data.subscribe(data => {
+        //     this.contact = data['contact']
+        // })
+
+        this.subscription = this.route.params.subscribe(async params => {
+            const pet = await lastValueFrom(this.contactService.getById(params['id']))
+            this.contact = pet
+        })
     }
 
-    onSelectContactId() {
 
-        this.selectContact.emit('')
+    onBack() {
+        this.router.navigateByUrl('/contacts')
+        // this.router.navigate(['/'])
     }
+
 }
