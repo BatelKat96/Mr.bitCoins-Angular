@@ -1,7 +1,7 @@
 .contact-preview {
-    // height: 150px;
     width: 200px;
-    box-shadow: -1px 1px 8px #00000045;
+    box-shadow: -1px 1px 8px #ffffffb3;
+    background-color: rgb(13, 26, 57);
     border-radius: 3px;
     display: flex;
     flex-direction: column;
@@ -38,13 +38,24 @@
                 height: 2em;
                 background-color: inherit;
                 border-radius: 100%;
-                border: 1px solid black;
+                border: 1px solid aliceblue;
+                color: aliceblue;
                 transition: 0.15s;
                 cursor: pointer;
 
                 &:hover {
                     background-color: orangered;
-                    color: white;
+                }
+            }
+
+            .edit-btn {
+                background-color: rgb(13, 26, 57);
+                color: aliceblue;
+                border: 1px solid aliceblue;
+
+                &:hover {
+                    background-color: aliceblue;
+                    color: rgb(13, 26, 57);
                 }
             }
         }
