@@ -21,7 +21,7 @@ export class ContactEditComponent {
 
   ngOnInit(): void {
     this.subscription = this.route.data.subscribe(({ contact }) => {
-      this.contact = contact || this.contactService.getEmptyContact() as Contact
+      this.contact = { ...contact } || this.contactService.getEmptyContact() as Contact
     })
   }
 
