@@ -25,10 +25,7 @@ export class ContactDetailsComponent implements OnInit {
             this.contact = data['contact']
         })
 
-        // this.subscription = this.route.params.subscribe(async params => {
-        //     const pet = await lastValueFrom(this.contactService.getById(params['id']))
-        //     this.contact = pet
-        // })
+
     }
 
 
