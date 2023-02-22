@@ -1,3 +1,11 @@
-<h3>Hello {{user.name}}</h3>
-<p>Coins: {{user.coins}}</p>
-<p> 1$= {{ rate }} BitCoins</p>
+<section class="home-page">
+
+    <h2>Welcome {{user.name}}!</h2>
+    <div class="home-page-container">
+        <h3>
+            {{user.name}}'s balance
+        </h3>
+        <p>Coins: ${{user.coins}}</p>
+        <p> $1 = <span> ₿ {{ rate }} </span></p>
+    </div>
+</section>

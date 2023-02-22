@@ -3,7 +3,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f5b055;
+    box-shadow: -1px 1px 8px #ffffffb3;
+    background-color: rgb(13, 26, 57);
     color: whitesmoke;
     margin-bottom: 30px;
     font-size: 1.2em;
@@ -14,7 +15,12 @@ header {
         cursor: pointer;
 
         &:hover {
-            color: #d57900;
+            color: gold;
+            text-decoration: none;
+        }
+
+        &.active {
+            color: gold;
         }
     }
 }

@@ -1,9 +1,13 @@
-<section class="contact-details">
-    <p>Name: {{contact.name}}</p>
-    <p>Email: {{contact.email}}</p>
-    <p>Phone: {{contact.phone}}</p>
+<section class="contact-details-section">
     <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
-    <br />
-    <button (click)="onBack()">Go back</button>
+    <div class="contact-details-container">
+
+        <h3>{{contact.name}}</h3>
+        <p>Email: {{contact.email}}</p>
+        <p>Phone: {{contact.phone}}</p>
+        <div class="back-btn-container">
+            <button class="back-btn" (click)="onBack()">Go back</button>
+        </div>
+    </div>
 
 </section>
