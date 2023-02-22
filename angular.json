@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "inClass-pets": {
+        "misterBITCoin": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/in-class-pets",
+                        "outputPath": "dist/misterBITCoin",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": [
@@ -58,10 +58,10 @@
                             "sourceMap": true,
                             "namedChunks": true,
                             "fileReplacements": [
-                              {
-                                "replace": "src/environments/environment.ts",
-                                "with": "src/environments/environment.development.ts"
-                              }
+                                {
+                                    "replace": "src/environments/environment.ts",
+                                    "with": "src/environments/environment.development.ts"
+                                }
                             ]
                         }
                     },
@@ -71,10 +71,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "inClass-pets:build:production"
+                            "browserTarget": "misterBITCoin:build:production"
                         },
                         "development": {
-                            "browserTarget": "inClass-pets:build:development"
+                            "browserTarget": "misterBITCoin:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "inClass-pets:build"
+                        "browserTarget": "misterBITCoin:build"
                     }
                 },
                 "test": {
