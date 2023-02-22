@@ -11,8 +11,6 @@ import { FormsModule } from '@angular/forms';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
-import { ChartsComponent } from './cmps/charts/charts.component';
-import { GoogleChartsModule } from 'angular-google-charts';
 import { MarketPriceComponent } from './cmps/market-price/market-price.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
@@ -27,7 +25,6 @@ import { ContactEditComponent } from './pages/contact-edit/contact-edit.componen
     ContactFilterComponent,
     ContactDetailsComponent,
     HomePageComponent,
-    ChartsComponent,
     MarketPriceComponent,
     AppHeaderComponent,
     ContactEditComponent,
@@ -37,7 +34,6 @@ import { ContactEditComponent } from './pages/contact-edit/contact-edit.componen
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
